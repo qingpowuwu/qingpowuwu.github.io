@@ -79,6 +79,25 @@
       p, li {
         text-align: justify;
       }
+      .section-toggle {
+        cursor: pointer;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-toggle:hover {
+        opacity: 0.75;
+      }
+      .section-arrow {
+        font-size: 13px;
+        color: #888;
+        transition: transform 0.2s ease;
+        display: inline-block;
+      }
+      .section-arrow.collapsed {
+        transform: rotate(-90deg);
+      }
     </style>
   </head>
 
@@ -198,10 +217,11 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:8px 16px 4px 16px;width:100%;vertical-align:middle">
-                <h3 style="margin:0;color:#444;font-size:15px;font-weight:600;border-left:3px solid #3b82f6;padding-left:10px;letter-spacing:0.01em;">VLA &amp; World Model</h3>
+                <h3 class="section-toggle" style="margin:0;color:#444;font-size:15px;font-weight:600;border-left:3px solid #3b82f6;padding-left:10px;letter-spacing:0.01em;" onclick="toggleSection('pubs-vla')">VLA &amp; World Model<span class="section-arrow">▾</span></h3>
               </td>
             </tr>
           </tbody></table>
+          <div id="pubs-vla">
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
             <!-- Lift3D-VLA | ADD: images/papers/lift3dvla.png -->
@@ -258,7 +278,7 @@
               <td style="padding:20px;width:45%;vertical-align:middle;text-align:justify">
                 <a href="https://arxiv.org/abs/2509.22642"><span class="papertitle">WoW: Towards a World Omniscient World Model Through Embodied Interaction</span></a>
                 <br>
-                Xiaowei Chi, Peidong Jia, Chun-Kai Fan, Xiaozhu Ju, Weishi Mi, Kevin Zhang, Zhiyuan Qin, Wanxin Tian, Kuangzhi Ge, Hao Li, Zezhong Qian, Anthony Chen, ..., Yong Dai, <strong>Qingpo Wuwu</strong>, Chengyu Bai, ..., Yike Guo, Shanghang Zhang, Jian Tang
+                Xiaowei Chi<sup>†</sup>, Peidong Jia<sup>†</sup>, Chun-Kai Fan<sup>†</sup>, Xiaozhu Ju<sup>†</sup>, Weishi Mi<sup>†</sup>, Kevin Zhang, Zhiyuan Qin, Wanxin Tian, Kuangzhi Ge, Hao Li, Zezhong Qian, Anthony Chen, ..., Yong Dai, <strong>Qingpo Wuwu</strong>, Chengyu Bai, ..., Yike Guo, Shanghang Zhang, Jian Tang
                 <br>
                 <em class="venue">arXiv</em>, 2025
                 <br>
@@ -277,7 +297,7 @@
               <td style="padding:20px;width:45%;vertical-align:middle;text-align:justify">
                 <a href="https://arxiv.org/abs/2601.04137"><span class="papertitle">Wow, Wo, Val! A Comprehensive Embodied World Model Evaluation Turing Test</span></a>
                 <br>
-                Chun-Kai Fan, Xiaowei Chi, Xiaozhu Ju, Hao Li, Yong Bao, ..., Weishi Mi, <strong>Qingpo Wuwu</strong>, Peidong Jia, ..., Yike Guo, Shanghang Zhang, Jian Tang
+                Chun-Kai Fan<sup>†</sup>, Xiaowei Chi<sup>†</sup>, Xiaozhu Ju, Hao Li, Yong Bao, ..., Weishi Mi, <strong>Qingpo Wuwu</strong>, Peidong Jia, ..., Yike Guo, Shanghang Zhang, Jian Tang
                 <br>
                 <em class="venue">arXiv</em>, 2025
                 <br>
@@ -287,15 +307,17 @@
             </tr>
 
           </tbody></table>
+          </div>
 
           <!-- Section: Neural Rendering -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:8px 16px 4px 16px;width:100%;vertical-align:middle">
-                <h3 style="margin:0;color:#444;font-size:15px;font-weight:600;border-left:3px solid #10b981;padding-left:10px;letter-spacing:0.01em;">Neural Rendering</h3>
+                <h3 class="section-toggle" style="margin:0;color:#444;font-size:15px;font-weight:600;border-left:3px solid #10b981;padding-left:10px;letter-spacing:0.01em;" onclick="toggleSection('pubs-nr')">Neural Rendering<span class="section-arrow">▾</span></h3>
               </td>
             </tr>
           </tbody></table>
+          <div id="pubs-nr">
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
             <!-- SparseStreet | ADD: images/papers/sparsestreet.png -->
@@ -426,15 +448,17 @@
             </tr>
 
           </tbody></table>
+          </div>
 
           <!-- Section: Physics-Informed Simulation -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:8px 16px 4px 16px;width:100%;vertical-align:middle">
-                <h3 style="margin:0;color:#444;font-size:15px;font-weight:600;border-left:3px solid #f59e0b;padding-left:10px;letter-spacing:0.01em;">Physics-Informed Simulation</h3>
+                <h3 class="section-toggle" style="margin:0;color:#444;font-size:15px;font-weight:600;border-left:3px solid #f59e0b;padding-left:10px;letter-spacing:0.01em;" onclick="toggleSection('pubs-physics')">Physics-Informed Simulation<span class="section-arrow">▾</span></h3>
               </td>
             </tr>
           </tbody></table>
+          <div id="pubs-physics">
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
             <!-- PINNsAgent | ADD: images/papers/pinnsagent.png -->
@@ -481,6 +505,7 @@
             </tr>
 
           </tbody></table>
+          </div>
           </div>
 
           <!-- Work Experience -->
@@ -596,5 +621,18 @@
         </td>
       </tr>
     </table>
+  <script>
+    function toggleSection(id) {
+      var el = document.getElementById(id);
+      var arrow = document.querySelector('[onclick="toggleSection(\'' + id + '\')"] .section-arrow');
+      if (el.style.display === 'none') {
+        el.style.display = '';
+        arrow.classList.remove('collapsed');
+      } else {
+        el.style.display = 'none';
+        arrow.classList.add('collapsed');
+      }
+    }
+  </script>
   </body>
 </html>
