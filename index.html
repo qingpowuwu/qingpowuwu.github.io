@@ -99,6 +99,79 @@
       .section-arrow.collapsed {
         transform: rotate(-90deg);
       }
+      .visitor-map-section {
+        width: 130%;
+        margin-left: -12.5%;
+        padding: 16px;
+        box-sizing: border-box;
+      }
+      .visitor-map-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 8px;
+      }
+      .visitor-map-summary {
+        color: #666;
+        font-size: 13px;
+        text-align: right;
+      }
+      #visitor-map {
+        width: 100%;
+        min-height: 330px;
+      }
+      #visitor-map svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .visitor-map-country {
+        stroke: #fff;
+        stroke-width: 0.45;
+        vector-effect: non-scaling-stroke;
+      }
+      .visitor-map-country:focus {
+        outline: none;
+        stroke: #1772d0;
+        stroke-width: 1.6;
+      }
+      .visitor-map-legend,
+      .visitor-map-top {
+        color: #666;
+        font-size: 12px;
+      }
+      .visitor-map-top {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 16px;
+        margin-top: 8px;
+      }
+      .visitor-map-status {
+        min-height: 330px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #777;
+        text-align: center;
+      }
+      @media (max-width: 700px) {
+        .visitor-map-section {
+          width: 100%;
+          margin-left: 0;
+        }
+        .visitor-map-header {
+          display: block;
+        }
+        .visitor-map-summary {
+          margin-top: 4px;
+          text-align: left;
+        }
+        #visitor-map,
+        .visitor-map-status {
+          min-height: 220px;
+        }
+      }
     </style>
   </head>
 
@@ -648,6 +721,18 @@
           </tbody></table>
           </div>
 
+          <!-- Visitor map -->
+          <section class="visitor-map-section" aria-labelledby="visitor-map-title">
+            <div class="visitor-map-header">
+              <h2 id="visitor-map-title">Visitors</h2>
+              <div class="visitor-map-summary" id="visitor-map-summary" aria-live="polite"></div>
+            </div>
+            <div id="visitor-map" aria-label="World map showing visits by country">
+              <div class="visitor-map-status">Visitor statistics will appear after GoatCounter finishes its first data update.</div>
+            </div>
+            <div class="visitor-map-top" id="visitor-map-top"></div>
+          </section>
+
           <!-- Footer -->
           <div style="width:130%;margin-left:-12.5%;">
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -678,5 +763,8 @@
       }
     }
   </script>
+  <script type="module" src="visitor-map.js"></script>
+  <script data-goatcounter="https://qingpowuwu.goatcounter.com/count"
+          async src="https://gc.zgo.at/count.js"></script>
   </body>
 </html>
