@@ -1,5 +1,26 @@
 {
-  "generatedAt": null,
-  "totalVisitors": 0,
-  "countries": []
+  "generatedAt": "2026-09-18T10:12:35.149Z",
+  "totalVisitors": 16,
+  "countries": [
+    {
+      "code": "US",
+      "name": "United States",
+      "count": 9
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "count": 5
+    },
+    {
+      "code": "BO",
+      "name": "Bolivia",
+      "count": 1
+    },
+    {
+      "code": "CN",
+      "name": "China",
+      "count": 1
+    }
+  ]
 }
