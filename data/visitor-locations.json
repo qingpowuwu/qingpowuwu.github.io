@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-19T08:07:34.940Z",
-  "totalVisitors": 18,
+  "generatedAt": "2026-09-22T08:37:34.813Z",
+  "totalVisitors": 22,
   "countries": [
     {
       "code": "US",
       "name": "United States",
-      "count": 11
+      "count": 13
     },
     {
       "code": "DE",
@@ -20,6 +20,16 @@
     {
       "code": "CN",
       "name": "China",
+      "count": 1
+    },
+    {
+      "code": "HK",
+      "name": "Hong Kong",
+      "count": 1
+    },
+    {
+      "code": "TW",
+      "name": "Taiwan",
       "count": 1
     }
   ]
