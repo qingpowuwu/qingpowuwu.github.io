@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-22T08:37:34.813Z",
-  "totalVisitors": 22,
+  "generatedAt": "2026-09-24T08:32:29.837Z",
+  "totalVisitors": 25,
   "countries": [
     {
       "code": "US",
@@ -13,6 +13,11 @@
       "count": 5
     },
     {
+      "code": "HK",
+      "name": "Hong Kong",
+      "count": 4
+    },
+    {
       "code": "BO",
       "name": "Bolivia",
       "count": 1
@@ -20,11 +25,6 @@
     {
       "code": "CN",
       "name": "China",
-      "count": 1
-    },
-    {
-      "code": "HK",
-      "name": "Hong Kong",
       "count": 1
     },
     {
