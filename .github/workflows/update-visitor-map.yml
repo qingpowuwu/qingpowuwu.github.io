@@ -1,0 +1,32 @@
+name: Update visitor map
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Fetch aggregated GoatCounter locations
+        env:
+          GOATCOUNTER_API_TOKEN: ${{ secrets.GOATCOUNTER_API_TOKEN }}
+        run: node scripts/update-visitor-map.mjs
+
+      - name: Commit updated public statistics
+        run: |
+          if git diff --quiet -- data/visitor-locations.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/visitor-locations.json
+          git commit -m "Update visitor map data"
+          git push

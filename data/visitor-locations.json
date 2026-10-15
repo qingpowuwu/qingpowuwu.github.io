@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-10-13T10:43:31.121Z",
+  "totalVisitors": 54,
+  "countries": [
+    {
+      "code": "US",
+      "name": "United States",
+      "count": 25
+    },
+    {
+      "code": "HK",
+      "name": "Hong Kong",
+      "count": 12
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "count": 5
+    },
+    {
+      "code": "JP",
+      "name": "Japan",
+      "count": 5
+    },
+    {
+      "code": "BO",
+      "name": "Bolivia",
+      "count": 2
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "count": 2
+    },
+    {
+      "code": "BD",
+      "name": "Bangladesh",
+      "count": 1
+    },
+    {
+      "code": "CN",
+      "name": "China",
+      "count": 1
+    },
+    {
+      "code": "TW",
+      "name": "Taiwan",
+      "count": 1
+    }
+  ]
+}

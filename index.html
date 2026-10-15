@@ -1,0 +1,800 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Qingpo Wuwu</title>
+
+    <meta name="author" content="Qingpo Wuwu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="icon" type="image/png" href="images/logos/imperial.png">
+    <style>
+      .paper-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 6px;
+        display: block;
+      }
+      .paper-img-placeholder {
+        width: 100%;
+        height: 130px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.3;
+        color: #333;
+      }
+      .logo-img {
+        width: 100%;
+        max-width: 70px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: auto;
+      }
+      .logo-placeholder {
+        width: 100%;
+        max-width: 70px;
+        height: 35px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+        color: #555;
+        margin: auto;
+      }
+      .work-logo-img {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: auto;
+      }
+      .work-logo-placeholder {
+        width: 100%;
+        max-width: 150px;
+        height: 70px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+        color: #555;
+        margin: auto;
+      }
+      .venue {
+        color: #c0392b;
+      }
+      p, li {
+        text-align: justify;
+      }
+      .section-toggle {
+        cursor: pointer;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-toggle:hover {
+        opacity: 0.75;
+      }
+      .section-arrow {
+        font-size: 13px;
+        color: #888;
+        transition: transform 0.2s ease;
+        display: inline-block;
+      }
+      .section-arrow.collapsed {
+        transform: rotate(-90deg);
+      }
+      .visitor-map-section {
+        width: 130%;
+        margin-left: -12.5%;
+        padding: 16px;
+        box-sizing: border-box;
+      }
+      .visitor-map-header {
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        margin: 0 0 8px;
+      }
+      .visitor-map-summary {
+        color: #666;
+        font-size: 13px;
+        text-align: right;
+      }
+      #visitor-map {
+        width: 55%;
+        max-width: 560px;
+        min-height: 0;
+        margin: 0 auto;
+      }
+      #visitor-map svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .visitor-map-country {
+        stroke: #fff;
+        stroke-width: 0.45;
+        vector-effect: non-scaling-stroke;
+      }
+      .visitor-map-country:focus {
+        outline: none;
+        stroke: #1772d0;
+        stroke-width: 1.6;
+      }
+      .visitor-map-legend,
+      .visitor-map-top {
+        color: #666;
+        font-size: 12px;
+      }
+      .visitor-map-top {
+        width: 55%;
+        max-width: 560px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 16px;
+        margin: 8px auto 0;
+      }
+      .visitor-map-status {
+        min-height: 330px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #777;
+        text-align: center;
+      }
+      @media (max-width: 700px) {
+        .visitor-map-section {
+          width: 100%;
+          margin-left: 0;
+        }
+        .visitor-map-header {
+          width: 100%;
+          display: block;
+        }
+        .visitor-map-summary {
+          margin-top: 4px;
+          text-align: left;
+        }
+        #visitor-map,
+        .visitor-map-top {
+          width: 100%;
+        }
+        .visitor-map-status {
+          min-height: 220px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+
+          <!-- Header -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Qingpo Wuwu
+                </p>
+                <p style="text-align: justify;">
+                  Hi! I am a Ph.D. student in Computer Science at <a href="https://www.pku.edu.cn/">Peking University</a>, advised by <a href="https://scholar.google.com/citations?user=voqw10cAAAAJ&hl=en">Prof. Shanghang Zhang</a> and <a href="https://cs.pku.edu.cn/info/1217/1988.htm">Prof. Huizhu Jia</a>. My research interests lie at the intersection of <strong>3D reconstruction</strong>, <strong>embodied AI</strong>, and <strong>physics-informed simulation</strong>. I aim to bridge the gap between perception and action by integrating geometric understanding into world models and vision-language-action (VLA) models, ultimately empowering embodied agents to reason about and manipulate the real-world environment.
+                </p>
+
+                <p style="text-align: justify;">
+                  Prior to joining the integrated M.Sc./Ph.D. program at <a href="https://www.pku.edu.cn/">Peking University</a> in 2022, I started my undergraduate studies in Physics at <a href="https://www.imperial.ac.uk/">Imperial College London</a> in 2019 and concurrently pursued a second B.Sc. in Computer Science at <a href="https://www.gold.ac.uk/">Goldsmiths, University of London</a> starting in 2020.
+                </p>
+
+                <p style="text-align: justify;">
+                  I am currently looking for <strong>research internship positions</strong> related to <strong>Embodied AI</strong> and <strong>world models</strong>. I am also keen to collaborate on exciting projects at the intersection of vision, physics, and robotics—feel free to contact me!
+                </p>
+
+                <p style="text-align:center">
+                  <a href="mailto:qingpowuwu.study@gmail.com">Email</a> &nbsp;/&nbsp;
+                  <a href="https://scholar.google.com/citations?user=KAXu0vAAAAAJ&hl=en">Scholar</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/qingpowuwu">GitHub</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:37%;max-width:37%">
+                <a href="images/profile.png"><img style="width:100%;max-width:100%;height:300px;object-fit:contain;border-radius:8px;" alt="profile photo" src="images/profile.png"></a>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- Education -->
+          <div style="width:130%;margin-left:-12.5%;">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Education</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          <!-- Graduate -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:8px 16px 4px 16px;width:100%;vertical-align:middle">
+                <h3 style="margin:0;color:#444;font-size:15px;font-weight:600;border-left:3px solid #3b82f6;padding-left:10px;letter-spacing:0.01em;">Graduate</h3>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px 35px 16px 16px;width:38%;vertical-align:middle;text-align:right">
+                <img src="images/logos/pku.png" alt="Peking University" class="logo-img" style="margin-right:0;margin-left:auto;"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="logo-placeholder" style="display:none;background-color:#fef3c7;margin-right:0;margin-left:auto;">PKU</div>
+              </td>
+              <td style="padding:20px 20px 20px 8px;width:62%;vertical-align:middle">
+                <a href="https://www.pku.edu.cn/"><strong>Peking University</strong></a>, Beijing, China
+                <br>Integrated M.Sc./Ph.D. in Computer Science
+                <br>Sep. 2022 – Present
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- Undergraduate -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:8px 16px 4px 16px;width:100%;vertical-align:middle">
+                <h3 style="margin:0;color:#444;font-size:15px;font-weight:600;border-left:3px solid #10b981;padding-left:10px;letter-spacing:0.01em;">Undergraduate</h3>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px 35px 16px 16px;width:19%;vertical-align:middle;text-align:right">
+                <img src="images/logos/imperial.png" alt="Imperial College London" class="logo-img" style="margin-right:0;margin-left:auto;width:70px;height:70px;object-fit:contain;"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="logo-placeholder" style="display:none;background-color:#dbeafe;margin-right:0;margin-left:auto;">Imperial</div>
+              </td>
+              <td style="padding:16px 35px 16px 8px;width:31%;vertical-align:middle">
+                <a href="https://www.imperial.ac.uk/"><strong>Imperial College London</strong></a>
+                <br>B.Sc. in Physics
+                <br>2019 – 2022
+              </td>
+              <td style="padding:16px 35px 16px 16px;width:19%;vertical-align:middle;text-align:right">
+                <img src="images/logos/goldsmiths.png" alt="Goldsmiths, University of London" class="logo-img" style="margin-right:0;margin-left:auto;width:70px;height:70px;object-fit:contain;"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="logo-placeholder" style="display:none;background-color:#f3e8ff;margin-right:0;margin-left:auto;">Goldsmiths</div>
+              </td>
+              <td style="padding:16px 35px 16px 8px;width:31%;vertical-align:middle">
+                <a href="https://www.gold.ac.uk/"><strong>Goldsmiths, University of London</strong></a>
+                <br>B.Sc. in Computer Science
+                <br>2020 – 2025
+              </td>
+            </tr>
+          </tbody></table>
+          </div>
+
+          <!-- Publications -->
+          <div style="width:130%;margin-left:-12.5%;">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Publications</h2>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- Section: VLA & World Model -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:8px 16px 4px 16px;width:100%;vertical-align:middle">
+                <h3 class="section-toggle" style="margin:0;color:#444;font-size:15px;font-weight:600;border-left:3px solid #3b82f6;padding-left:10px;letter-spacing:0.01em;" onclick="toggleSection('pubs-vla')">VLA &amp; World Model<span class="section-arrow">▾</span></h3>
+              </td>
+            </tr>
+          </tbody></table>
+          <div id="pubs-vla">
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <!-- MV-WAM | ADD: images/papers/images/mvwams.png
+            <tr>
+              <td style="padding:16px;width:55%;vertical-align:middle;text-align:center">
+                <img src="images/papers/images/mvwams.png" alt="MV-WAM" class="paper-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="paper-img-placeholder" style="display:none;background-color:#dbeafe;">Arxiv</div>
+              </td>
+              <td style="padding:20px;width:45%;vertical-align:middle;text-align:justify">
+                <a href="https://arxiv.org/pdf/2606.21088">
+                  <span class="papertitle">MV-WAM: Manifold-Aware World Action Model with Value Augmentation</span>
+                </a>
+                <br>
+                Jintao Chen<sup>†</sup>, Peidong Jia<sup>†</sup>, <strong>Qingpo Wuwu<sup>†</sup></strong>, Jiaming Liu, Mengfei Du, Chun-Kai Fan, Xiaowei Chi, Hao Chen, Chengyu Bai, Zezhong Qian, Hao Wang, Jiajun Cao, Weishi Mi, Xiaozhu Ju, Jian Tang, Shanghang Zhang
+                <br>
+                <em class="venue">Arxiv</em>
+                <br>
+                <a href="https://arxiv.org/pdf/2606.21088">Paper</a>
+                <p></p>
+                <p>A manifold-aware world action model with value augmentation for end-to-end robotic manipulation.</p>
+              </td>
+            </tr>
+            -->
+
+            <!-- Lift3D-VLA | ADD: images/papers/images/lift3dvla.png
+            <tr>
+              <td style="padding:16px;width:55%;vertical-align:middle;text-align:center">
+                <img src="images/papers/images/lift3dvla.png" alt="Lift3D-VLA" class="paper-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="paper-img-placeholder" style="display:none;background-color:#dbeafe;">TPAMI<br>2026<br><span style="font-weight:normal;font-size:11px;">Under Review</span></div>
+              </td>
+              <td style="padding:20px;width:45%;vertical-align:middle;text-align:justify">
+                <a href="https://lift3dvla.github.io/">
+                  <span class="papertitle">Lift3D-VLA: Lifting VLA Models to 3D Geometry and Dynamics-Aware Manipulation</span>
+                </a>
+                <br>
+                Jiaming Liu<sup>†</sup>, <strong>Qingpo Wuwu<sup>†</sup></strong>, Nuowei Han<sup>†</sup>, Hao Chen<sup>†</sup>, Zhuoyang Liu, Fan Fei, Yueru Jia, Chenyang Gu, Yandong Guo, Boxin Shi, Shanghang Zhang
+                <br>
+                <em class="venue">TPAMI</em>, 2026 · Under Review
+                <br>
+                <a href="images/papers/pdfs/lift3dvla.pdf">Paper</a> /
+                <a href="https://lift3dvla.github.io/">Page</a>
+                <p></p>
+                <p>A 3D-aware framework that lifts geometric and dynamics priors into VLA models for robotic manipulation.</p>
+              </td>
+            </tr>
+            -->
+
+            <!-- ManualVLA | ADD: images/papers/images/manualvla.png
+            <tr>
+              <td style="padding:16px;width:55%;vertical-align:middle;text-align:center">
+                <img src="images/papers/images/manualvla.png" alt="ManualVLA" class="paper-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="paper-img-placeholder" style="display:none;background-color:#dbeafe;">CVPR<br>2026</div>
+              </td>
+              <td style="padding:20px;width:45%;vertical-align:middle;text-align:justify">
+                <a href="https://arxiv.org/pdf/2512.02013">
+                  <span class="papertitle">ManualVLA: A Unified VLA Model for Chain-of-Thought Manual Generation and Robotic Manipulation</span>
+                </a>
+                <br>
+                Chenyang Gu<sup>†</sup>, Jiaming Liu<sup>†</sup>, Hao Chen<sup>†</sup>, Runzhong Huang<sup>†</sup>, <strong>Qingpo Wuwu</strong>, Zhuoyang Liu, Xiaoqi Li, Ying Li, Renrui Zhang, Peng Jia, Pheng-Ann Heng, Shanghang Zhang
+                <br>
+                <em class="venue">CVPR</em>, 2026
+                <br>
+                <a href="https://arxiv.org/pdf/2512.02013">Paper</a> /
+                <a href="https://sites.google.com/view/maunalvla">Page</a>
+                <p></p>
+              </td>
+            </tr>
+            -->
+
+            <!-- WoW World Model | images/papers/images/wow.png -->
+            <tr>
+              <td style="padding:16px;width:55%;vertical-align:middle;text-align:center">
+                <img src="images/papers/images/wow.png" alt="WoW" class="paper-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="paper-img-placeholder" style="display:none;background-color:#f1f5f9;">Preprint<br>2025</div>
+              </td>
+              <td style="padding:20px;width:45%;vertical-align:middle;text-align:justify">
+                <a href="https://arxiv.org/abs/2509.22642"><span class="papertitle">WoW: Towards a World Omniscient World Model Through Embodied Interaction</span></a>
+                <br>
+                Xiaowei Chi<sup>†</sup>, Peidong Jia<sup>†</sup>, Chun-Kai Fan<sup>†</sup>, Xiaozhu Ju<sup>†</sup>, Weishi Mi<sup>†</sup>, Kevin Zhang, Zhiyuan Qin, Wanxin Tian, Kuangzhi Ge, Hao Li, Zezhong Qian, Anthony Chen, ..., Yong Dai, <strong>Qingpo Wuwu</strong>, Chengyu Bai, ..., Yike Guo, Shanghang Zhang, Jian Tang
+                <br>
+                <em class="venue">arXiv</em>, 2025
+                <br>
+                <a href="https://arxiv.org/abs/2509.22642">Paper</a>
+                <p></p>
+              </td>
+            </tr>
+
+            <!-- WoW Eval | images/papers/images/wow_eval.png -->
+            <tr>
+              <td style="padding:16px;width:55%;vertical-align:middle;text-align:center">
+                <img src="images/papers/images/wow_eval.png" alt="WoW Eval" class="paper-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="paper-img-placeholder" style="display:none;background-color:#f1f5f9;">Preprint<br>2025</div>
+              </td>
+              <td style="padding:20px;width:45%;vertical-align:middle;text-align:justify">
+                <a href="https://arxiv.org/abs/2601.04137"><span class="papertitle">Wow, Wo, Val! A Comprehensive Embodied World Model Evaluation Turing Test</span></a>
+                <br>
+                Chun-Kai Fan<sup>†</sup>, Xiaowei Chi<sup>†</sup>, Xiaozhu Ju, Hao Li, Yong Bao, ..., Weishi Mi, <strong>Qingpo Wuwu</strong>, Peidong Jia, ..., Yike Guo, Shanghang Zhang, Jian Tang
+                <br>
+                <em class="venue">arXiv</em>, 2025
+                <br>
+                <a href="https://arxiv.org/abs/2601.04137">Paper</a>
+                <p></p>
+              </td>
+            </tr>
+
+          </tbody></table>
+          </div>
+
+          <!-- Section: Neural Rendering -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:8px 16px 4px 16px;width:100%;vertical-align:middle">
+                <h3 class="section-toggle" style="margin:0;color:#444;font-size:15px;font-weight:600;border-left:3px solid #10b981;padding-left:10px;letter-spacing:0.01em;" onclick="toggleSection('pubs-nr')">Neural Rendering<span class="section-arrow">▾</span></h3>
+              </td>
+            </tr>
+          </tbody></table>
+          <div id="pubs-nr">
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <!-- SparseStreet | ADD: images/papers/images/sparsestreet.png -->
+            <tr>
+              <td style="padding:16px;width:55%;vertical-align:middle;text-align:center">
+                <img src="images/papers/images/sparsestreet.png" alt="SparseStreet" class="paper-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="paper-img-placeholder" style="display:none;background-color:#dbeafe;">ACM ICMR<br>2026</div>
+              </td>
+              <td style="padding:20px;width:45%;vertical-align:middle;text-align:justify">
+                <a href="https://sparsestreet.github.io/">
+                  <span class="papertitle">SparseStreet: Sparse Gaussian Splatting for Real-Time Street Scene Simulation</span>
+                </a>
+                <br>
+                <strong>Qingpo Wuwu</strong>, Xiaobao Wei, Peng Chen, Nan Huang, Zhongyu Zhao, Hao Wang, Ming Lu, Ningning Ma, Shanghang Zhang
+                <br>
+                <em class="venue">ACM ICMR</em>, 2026
+                <br>
+                <a href="https://sparsestreet.github.io/">Page</a>
+                <p></p>
+                <p>A compression framework for street scene Gaussian Splatting enabling real-time rendering.</p>
+              </td>
+            </tr>
+
+            <!-- EMD | ADD: images/papers/images/emd.png -->
+            <tr>
+              <td style="padding:16px;width:55%;vertical-align:middle;text-align:center">
+                <img src="images/papers/images/emd.png" alt="EMD" class="paper-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="paper-img-placeholder" style="display:none;background-color:#fef9c3;">ICCV<br>2025</div>
+              </td>
+              <td style="padding:20px;width:45%;vertical-align:middle;text-align:justify">
+                <a href="https://arxiv.org/abs/2411.15582">
+                  <span class="papertitle">EMD: Explicit Motion Modeling for High-Quality Street Gaussian Splatting</span>
+                </a>
+                <br>
+                Xiaobao Wei<sup>†</sup>, <strong>Qingpo Wuwu<sup>†</sup></strong>, Zhongyu Zhao, Zhuangzhe Wu, Nan Huang, Ming Lu, Ningning Ma, Shanghang Zhang
+                <br>
+                <em class="venue">ICCV</em>, 2025
+                <br>
+                <a href="https://arxiv.org/abs/2411.15582">Paper</a> /
+                <a href="https://qingpowuwu.github.io/emd/">Page</a>
+                <p></p>
+                <p>Explicit motion decomposition for dynamic street scene reconstruction with 3D Gaussian Splatting.</p>
+              </td>
+            </tr>
+
+            <!-- Nature Comp Sci | ADD: images/papers/images/microscopy.png -->
+            <tr>
+              <td style="padding:16px;width:55%;vertical-align:middle;text-align:center">
+                <img src="images/papers/images/microscopy.png" alt="INIF" class="paper-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="paper-img-placeholder" style="display:none;background-color:#dcfce7;">Nature<br>Comp Sci<br>2025</div>
+              </td>
+              <td style="padding:20px;width:45%;vertical-align:middle;text-align:justify">
+                <a href="https://arxiv.org/abs/2405.19012">
+                  <span class="papertitle">Implicit Neural Image Field for Biological Microscopy Image Compression</span>
+                </a>
+                <br>
+                Gaole Dai, Rongyu Zhang<sup>†</sup>, <strong>Qingpo Wuwu<sup>†</sup></strong>, Cheng-Ching Tseng<sup>†</sup>, Shaokang Wang<sup>†</sup>, Ming Lu, Tiejun Huang, Yu Zhou, Ali Ata Tuz, Matthias Gunzer, Jianxu Chen, Shanghang Zhang
+                <br>
+                <em class="venue">Nature Computational Science</em>, 2025
+                <br>
+                <a href="https://arxiv.org/abs/2405.19012">Paper</a> /
+                <a href="https://github.com/RoyZry98/INIF-Pytorch">Page</a>
+                <p></p>
+                <p>Implicit neural representations for high-fidelity compression of large-scale biological microscopy images.</p>
+              </td>
+            </tr>
+
+            <!-- MixedGaussianAvatar | ADD: images/papers/images/mixedgaussian.png -->
+            <tr>
+              <td style="padding:16px;width:55%;vertical-align:middle;text-align:center">
+                <img src="images/papers/images/mixedgaussian.png" alt="MixedGaussianAvatar" class="paper-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="paper-img-placeholder" style="display:none;background-color:#fce7f3;">ACM MM<br>2025</div>
+              </td>
+              <td style="padding:20px;width:45%;vertical-align:middle;text-align:justify">
+                <a href="https://arxiv.org/abs/2412.04955">
+                  <span class="papertitle">MixedGaussianAvatar: Realistically and Geometrically Accurate Head Avatar via Mixed 2D-3D Gaussians</span>
+                </a>
+                <br>
+                Peng Chen, Xiaobao Wei, <strong>Qingpo Wuwu</strong>, Xinyi Wang, Xingyu Xiao, Ming Lu
+                <br>
+                <em class="venue">ACM MM</em>, 2025
+                <br>
+                <a href="https://arxiv.org/abs/2412.04955">Paper</a>
+                <p></p>
+              </td>
+            </tr>
+
+            <!-- RoboArmGS | ADD: images/papers/images/roboarmgs.png
+            <tr>
+              <td style="padding:16px;width:55%;vertical-align:middle;text-align:center">
+                <img src="images/papers/images/roboarmgs.png" alt="RoboArmGS" class="paper-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="paper-img-placeholder" style="display:none;background-color:#f1f5f9;">Preprint<br>2025</div>
+              </td>
+              <td style="padding:20px;width:45%;vertical-align:middle;text-align:justify">
+                <a href="https://arxiv.org/abs/2511.17961">
+                  <span class="papertitle">RoboArmGS: High-Quality Robotic Arm Splatting via Bézier Curve Refinement</span>
+                </a>
+                <br>
+                Hao Wang, Xiaobao Wei, Ying Li, <strong>Qingpo Wuwu</strong>, Dianxi Wu, Jiahao Cao, Ming Lu, Wenzhao Zheng, Shanghang Zhang
+                <br>
+                <em class="venue">arXiv</em>, 2025
+                <br>
+                <a href="https://arxiv.org/abs/2511.17961">Paper</a>
+                <p></p>
+              </td>
+            </tr>
+            -->
+
+            <!-- OmniIndoor3D | ADD: images/papers/images/omniindoor.png -->
+            <tr>
+              <td style="padding:16px;width:55%;vertical-align:middle;text-align:center">
+                <img src="images/papers/images/omniindoor.png" alt="OmniIndoor3D" class="paper-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="paper-img-placeholder" style="display:none;background-color:#f1f5f9;">Preprint<br>2025</div>
+              </td>
+              <td style="padding:20px;width:45%;vertical-align:middle;text-align:justify">
+                <a href="https://arxiv.org/pdf/2505.20610">
+                  <span class="papertitle">OmniIndoor3D: Comprehensive Indoor 3D Reconstruction</span>
+                </a>
+                <br>
+                Xiaobao Wei, Xiaoan Zhang, Hao Wang, <strong>Qingpo Wuwu</strong>, Ming Lu, Wenzhao Zheng, Shanghang Zhang
+                <br>
+                <em class="venue">arXiv</em>, 2025
+                <br>
+                <a href="https://arxiv.org/pdf/2505.20610">Paper</a>
+                <p></p>
+              </td>
+            </tr>
+
+          </tbody></table>
+          </div>
+
+          <!-- Section: Physics-Informed Simulation -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:8px 16px 4px 16px;width:100%;vertical-align:middle">
+                <h3 class="section-toggle" style="margin:0;color:#444;font-size:15px;font-weight:600;border-left:3px solid #f59e0b;padding-left:10px;letter-spacing:0.01em;" onclick="toggleSection('pubs-physics')">Physics-Informed Simulation<span class="section-arrow">▾</span></h3>
+              </td>
+            </tr>
+          </tbody></table>
+          <div id="pubs-physics">
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <!-- PINNsAgent | ADD: images/papers/images/pinnsagent.png -->
+            <tr>
+              <td style="padding:16px;width:55%;vertical-align:middle;text-align:center">
+                <img src="images/papers/images/pinnsagent.png" alt="PINNsAgent" class="paper-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="paper-img-placeholder" style="display:none;background-color:#fef9c3;">ICML<br>2025</div>
+              </td>
+              <td style="padding:20px;width:45%;vertical-align:middle;text-align:justify">
+                <a href="https://arxiv.org/abs/2501.12053">
+                  <span class="papertitle">PINNsAgent: Automated PDE Surrogation with Large Language Models</span>
+                </a>
+                <br>
+                <strong>Qingpo Wuwu<sup>†</sup></strong>, Chonghan Gao<sup>†</sup>, Tianyu Chen, Yihang Huang, Yuekai Zhang, Jianing Wang, Jianxin Li, Haoyi Zhou, Shanghang Zhang
+                <br>
+                <em class="venue">ICML</em>, 2025
+                <br>
+                <a href="https://arxiv.org/abs/2501.12053">Paper</a>
+                <p></p>
+                <p>An LLM-based agent framework for automating physics-informed neural network surrogation of partial differential equations.</p>
+              </td>
+            </tr>
+
+            <!-- PDEffusion | ADD: images/papers/images/pdeffusion.png -->
+            <tr>
+              <td style="padding:16px;width:55%;vertical-align:middle;text-align:center">
+                <img src="images/papers/images/pdeffusion.png" alt="PDEffusion" class="paper-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="paper-img-placeholder" style="display:none;background-color:#ede9fe;">BigData<br>2025</div>
+              </td>
+              <td style="padding:20px;width:45%;vertical-align:middle;text-align:justify">
+                <a href="https://openreview.net/pdf?id=3sOE3MFepx">
+                  <span class="papertitle">PDEffusion: Solving Equations with the Physics-Grounding Diffusion Model</span>
+                </a>
+                <br>
+                Chonghan Gao, Haoyi Zhou, Wenxin Gong, <strong>Qingpo Wuwu</strong>, Tianyu Chen, Qian Yu, Shanghang Zhang, Jianxin Li
+                <br>
+                <em class="venue">IEEE BigData</em>, 2025
+                <br>
+                <a href="https://openreview.net/pdf?id=3sOE3MFepx">Paper</a>
+                <p></p>
+              </td>
+            </tr>
+
+          </tbody></table>
+          </div>
+          </div>
+
+          <!-- Work Experience -->
+          <div style="width:130%;margin-left:-12.5%;">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Work Experience</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <!-- Guotai Haitong | Logo source: https://www.gtht.com/static/svg/logo-new-t7kdZAa7.svg -->
+            <tr>
+              <td style="padding:16px;width:38%;vertical-align:middle;text-align:center">
+                <img src="images/logos/guotai-haitong.svg" alt="Guotai Haitong Securities" class="work-logo-img" style="max-width:215px;"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="work-logo-placeholder" style="display:none;background-color:#eff6ff;">Guotai Haitong<br>Securities</div>
+              </td>
+              <td style="padding:20px;width:62%;vertical-align:middle">
+                <strong>Quantitative Research Intern</strong>, Guotai Haitong Securities
+                <br>Sep. 2026 – Present · Beijing, China
+                <ul style="margin:6px 0 0 0;padding-left:18px;">
+                  <li>Conduct quantitative research and develop investment strategies to support asset allocation, portfolio optimization, and risk monitoring for proprietary trading.</li>
+                </ul>
+              </td>
+            </tr>
+
+            <!-- Simplexity | ADD: images/logos/simplexity.png -->
+            <tr>
+              <td style="padding:16px;width:38%;vertical-align:middle;text-align:center">
+                <img src="images/logos/simplexity.png" alt="Simplexity Robotics" class="work-logo-img"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="work-logo-placeholder" style="display:none;background-color:#e0f2fe;">Simplexity<br>Robotics</div>
+              </td>
+              <td style="padding:20px;width:62%;vertical-align:middle">
+                <strong>Research Intern</strong>, Simplexity Robotics — Embodied AI
+                <br>Sep. 2025 – Sep. 2026 · Beijing, China
+                <ul style="margin:6px 0 0 0;padding-left:18px;">
+                  <li>Developed Lift3D-VLA, a 3D-aware framework lifting geometric and dynamics priors into VLA models for robotic manipulation.</li>
+                </ul>
+              </td>
+            </tr>
+
+            <!-- Beijing Humanoid Robot Innovation Center
+            <tr>
+              <td style="padding:16px;width:38%;vertical-align:middle;text-align:center">
+                <img src="images/logos/xhumanoid-v3.png" alt="Beijing Humanoid Robot Innovation Center" class="work-logo-img" style="max-width:215px;"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="work-logo-placeholder" style="display:none;background-color:#f0fdf4;">X-Humanoid</div>
+              </td>
+              <td style="padding:20px;width:62%;vertical-align:middle">
+                <strong>Research Intern</strong>, Beijing Humanoid Robot Innovation Center Co., Ltd. — World Models
+                <br>Jul. 2025 – May 2026 · Beijing, China
+                <ul style="margin:6px 0 0 0;padding-left:18px;">
+                  <li>Proposed MV-WAM, using modality-specific manifold denoising for vision and action to improve world-model generalization in embodied manipulation.</li>
+                </ul>
+              </td>
+            </tr>
+            -->
+
+            <!-- NIO | ADD: images/logos/nio.png -->
+            <tr>
+              <td style="padding:16px;width:38%;vertical-align:middle;text-align:center">
+                <img src="images/logos/nio.png" alt="NIO" class="work-logo-img"
+                style="max-width:115px;"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="work-logo-placeholder" style="display:none;background-color:#fef9c3;">NIO</div>
+              </td>
+              <td style="padding:20px;width:62%;vertical-align:middle">
+                <strong>Research Intern</strong>, NIO Co., Ltd. — 3D Reconstruction Division
+                <br>Aug. 2024 – Aug. 2025 · Beijing, China
+                <ul style="margin:6px 0 0 0;padding-left:18px;">
+                  <li>Developed EMD (Explicit Motion Decomposition) for dynamic scene reconstruction using Gaussian Splatting, accepted to ICCV 2025.</li>
+                  <li>Proposed SparseStreet, a compression framework for street scene Gaussian Splatting, accepted to ACM ICMR 2026.</li>
+                </ul>
+              </td>
+            </tr>
+
+            <!-- HMI-Lab, Peking University -->
+            <tr>
+              <td style="padding:16px;width:38%;vertical-align:middle;text-align:center">
+                <img src="images/logos/hmi_logo.png" alt="HMI-Lab, Peking University" class="work-logo-img" style="max-width:215px;transform:translate(6px,-6px);"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="work-logo-placeholder" style="display:none;background-color:#eff6ff;">HMI-Lab<br>Peking University</div>
+              </td>
+              <td style="padding:20px;width:62%;vertical-align:middle">
+                <strong>Research Intern</strong>, HMI-Lab, Peking University — LLM Agents
+                <br>Aug. 2023 – Aug. 2024 · Beijing, China
+                <ul style="margin:6px 0 0 0;padding-left:18px;">
+                  <li>Proposed PINNsAgent, an LLM-based multi-agent framework for automating physics-informed neural network development and PDE surrogation, accepted to ICML 2025.</li>
+                </ul>
+              </td>
+            </tr>
+
+          </tbody></table>
+          </div>
+
+          <!-- Awards & Grants -->
+          <div style="width:130%;margin-left:-12.5%;">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Awards &amp; Grants</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px 6px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr>
+              <td style="padding:12px 20px;vertical-align:top;text-align:justify">
+                <strong>2026: NSFC Research Fund for PhD Students</strong> — <em>Adaptive 3D Scene Representation Learning for Embodied AI Applications</em>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:12px 20px;vertical-align:top;text-align:justify">
+                <strong>2017: National High School Physics Competition</strong> — 13th place
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:12px 20px;vertical-align:top;text-align:justify">
+                <strong>2017: Provincial High School Physics Competition</strong> — 3rd place
+              </td>
+            </tr>
+
+          </tbody></table>
+          </div>
+
+          <!-- Visitor map -->
+          <section class="visitor-map-section" aria-labelledby="visitor-map-title">
+            <div class="visitor-map-header">
+              <h2 id="visitor-map-title">Visitors</h2>
+              <div class="visitor-map-summary" id="visitor-map-summary" aria-live="polite"></div>
+            </div>
+            <div id="visitor-map" aria-label="World map showing visits by country">
+              <div class="visitor-map-status">Visitor statistics will appear after GoatCounter finishes its first data update.</div>
+            </div>
+            <div class="visitor-map-top" id="visitor-map-top"></div>
+          </section>
+
+          <!-- Footer -->
+          <div style="width:130%;margin-left:-12.5%;">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0px">
+                <br>
+                <p style="text-align:right;font-size:small;">
+                  Template from <a href="https://jonbarron.info/">Jon Barron</a>.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          </div>
+
+        </td>
+      </tr>
+    </table>
+  <script>
+    function toggleSection(id) {
+      var el = document.getElementById(id);
+      var arrow = document.querySelector('[onclick="toggleSection(\'' + id + '\')"] .section-arrow');
+      if (el.style.display === 'none') {
+        el.style.display = '';
+        arrow.classList.remove('collapsed');
+      } else {
+        el.style.display = 'none';
+        arrow.classList.add('collapsed');
+      }
+    }
+  </script>
+  <script type="module" src="visitor-map.js"></script>
+  <script data-goatcounter="https://qingpowuwu.goatcounter.com/count"
+          async src="https://gc.zgo.at/count.js"></script>
+  </body>
+</html>
