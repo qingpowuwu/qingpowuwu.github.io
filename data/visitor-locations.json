@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-13T10:43:31.121Z",
-  "totalVisitors": 54,
+  "generatedAt": "2026-10-17T07:52:45.433Z",
+  "totalVisitors": 59,
   "countries": [
     {
       "code": "US",
@@ -10,7 +10,7 @@
     {
       "code": "HK",
       "name": "Hong Kong",
-      "count": 12
+      "count": 17
     },
     {
       "code": "DE",
