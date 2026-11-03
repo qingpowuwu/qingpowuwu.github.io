@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-31T09:44:30.869Z",
-  "totalVisitors": 86,
+  "generatedAt": "2026-11-03T10:58:33.013Z",
+  "totalVisitors": 90,
   "countries": [
     {
       "code": "HK",
@@ -10,7 +10,7 @@
     {
       "code": "US",
       "name": "United States",
-      "count": 31
+      "count": 34
     },
     {
       "code": "JP",
@@ -33,6 +33,11 @@
       "count": 2
     },
     {
+      "code": "SG",
+      "name": "Singapore",
+      "count": 2
+    },
+    {
       "code": "TW",
       "name": "Taiwan",
       "count": 2
@@ -45,11 +50,6 @@
     {
       "code": "CN",
       "name": "China",
-      "count": 1
-    },
-    {
-      "code": "SG",
-      "name": "Singapore",
       "count": 1
     }
   ]
