@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-21T11:16:27.097Z",
-  "totalVisitors": 127,
+  "generatedAt": "2026-11-25T13:05:29.768Z",
+  "totalVisitors": 135,
   "countries": [
     {
       "code": "US",
       "name": "United States",
-      "count": 48
+      "count": 51
     },
     {
       "code": "HK",
@@ -18,23 +18,23 @@
       "count": 16
     },
     {
+      "code": "SG",
+      "name": "Singapore",
+      "count": 7
+    },
+    {
       "code": "DE",
       "name": "Germany",
       "count": 5
     },
     {
-      "code": "SG",
-      "name": "Singapore",
+      "code": "KR",
+      "name": "South Korea",
       "count": 4
     },
     {
       "code": "CA",
       "name": "Canada",
-      "count": 3
-    },
-    {
-      "code": "KR",
-      "name": "South Korea",
       "count": 3
     },
     {
@@ -46,6 +46,11 @@
       "code": "TW",
       "name": "Taiwan",
       "count": 2
+    },
+    {
+      "code": "AE",
+      "name": "United Arab Emirates",
+      "count": 1
     },
     {
       "code": "BD",
