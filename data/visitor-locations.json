@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-25T13:05:29.768Z",
-  "totalVisitors": 135,
+  "generatedAt": "2026-11-27T12:37:36.921Z",
+  "totalVisitors": 138,
   "countries": [
     {
       "code": "US",
       "name": "United States",
-      "count": 51
+      "count": 53
     },
     {
       "code": "HK",
@@ -33,14 +33,14 @@
       "count": 4
     },
     {
-      "code": "CA",
-      "name": "Canada",
+      "code": "BO",
+      "name": "Bolivia",
       "count": 3
     },
     {
-      "code": "BO",
-      "name": "Bolivia",
-      "count": 2
+      "code": "CA",
+      "name": "Canada",
+      "count": 3
     },
     {
       "code": "TW",
